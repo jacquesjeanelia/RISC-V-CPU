@@ -3,7 +3,7 @@ module branch_control (
     input Branch,
     input [2:0] function3,
     input zero_flag, carry_flag, overflow_flag, sign_flag,
-    output wire branch_sel
+    output reg branch_sel
 );
 
     always @(*) begin

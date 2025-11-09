@@ -85,11 +85,11 @@ module CPU (
     ALU alu(
         .A(read_data1),
         .B(ALU_input2),
-        .sel(ALU_select),
-        .zero(zero_flag),
-        .carry(carry_flag),
-        .overflow(overflow_flag),
-        .sign(sign_flag),
+        .ALU_select(ALU_select),
+        .zero_flag(zero_flag),
+        .carry_flag(carry_flag),
+        .overflow_flag(overflow_flag),
+        .sign_flag(sign_flag),
         .out(ALU_result)
     );
 

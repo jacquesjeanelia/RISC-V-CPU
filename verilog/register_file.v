@@ -27,9 +27,9 @@ module register_file(
     input[4:0] readReg2,
     input[4:0] writeReg,
     input regWriteEnable,
-    output[N-1:0] readData1,
-    output[N-1:0] readData2,
-    input[N-1:0] writeData
+    output [31:0] readData1,
+    output [31:0] readData2,
+    input [31:0] writeData
     );
 
     reg [31:0] regFile [31:0];

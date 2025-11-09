@@ -20,6 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 `include "defines.v"
+
 module RCA(
     input [31:0] A, B,
     input cin,
@@ -27,22 +28,22 @@ module RCA(
     output unsigned Cout
 );
 
-wire [32:0] carry;
-assign carry[0] = cin; // Initial carry-in is 0
+    wire [32:0] carry;
+    assign carry[0] = cin; // Initial carry-in is 0
 
-generate
-    genvar i;
-    for (i = 0; i < 32; i = i + 1) begin
-            fullAdder FA (
-                .A(A[i]),
-                .B(B[i]),
-                .Cin(carry[i]),
-                .Out(Sum[i]),
-                .Cout(carry[i+1])
-            );
-    end
-endgenerate
+    generate
+        genvar i;
+        for (i = 0; i < 32; i = i + 1) begin
+                fullAdder FA (
+                    .A(A[i]),
+                    .B(B[i]),
+                    .Cin(carry[i]),
+                    .Out(Sum[i]),
+                    .Cout(carry[i+1])
+                );
+        end
+    endgenerate
 
-assign Cout = carry[32];
+    assign Cout = carry[32];
 
 endmodule
