@@ -1,4 +1,3 @@
-`include "defines.v"
 module InstrMem (
     input [5:0] address,
     output [31:0] data_out
@@ -8,7 +7,7 @@ module InstrMem (
     assign data_out = mem[address];
 
     initial begin
-        mem[0]=32' ; //lw x1, 0(x0)
+        mem[0]=32'b000000000000_00000_010_00001_0000011 ; //lw x1, 0(x0)
         mem[1]=32'b000000000100_00000_010_00010_0000011 ; //lw x2, 4(x0)
         mem[2]=32'b000000001000_00000_010_00011_0000011 ; //lw x3, 8(x0)
         mem[3]=32'b0000000_00010_00001_110_00100_0110011 ; //or x4, x1, x2
