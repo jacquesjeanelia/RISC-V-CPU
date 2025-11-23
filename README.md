@@ -6,7 +6,7 @@ Pipelined RISC-V CPU Implementation in Verilog
 ### Student Names
 
 Cherif Mikhail , 
-, Jacques Jean
+ Jacques Jean
 , Kirollos Mounir
 
 ### Project Overview
